@@ -1,0 +1,53 @@
+/*
+n = 5
+
+12345
+1234
+123
+12
+1
+
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define optimize()                \
+    ios_base::sync_with_stdio(0); \
+    cin.tie(0);                   \
+    cout.tie(0);
+
+typedef long long ll;
+typedef double dl;
+
+#define endl '\n'
+#define yes cout << "YES" << endl
+#define no cout << "NO" << endl
+#define nl cout << endl
+
+void solve()
+{
+    int n;
+    cin >> n;
+    for (int i = 1; i <= n; i++)
+    {
+        for(int j = n; j >= i; j--)
+        { 
+            cout << (n - j) + 1;
+        }
+        nl;
+    }
+}
+int main()
+{
+    optimize();
+
+    int t = 1;
+    // cin >> t;
+    while (t--)
+    {
+        solve();
+    }
+
+    return 0;
+}
